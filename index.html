@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        sentence = input("Enter a sentence: ")
+characters = len(sentence) - 1 # Exclude the period
+words = sentence.split()
+num_words = len(words)
+total_length = 0
+longest_word = ""
+shortest_word = words[0]
+
+for word in words:
+    word_length = len(word)
+    total_length += word_length
+    if word_length > len(longest_word):
+        longest_word = word
+    if word_length < len(shortest_word):
+        shortest_word = word
+
+avg_length = total_length / num_words
+
+print("Number of characters:", characters)
+print("Number of words:", num_words)
+print("Average length of each word:", avg_length)
+print("Longest word:", longest_word)
+print("Shortest word:", shortest_word)
+
+    </p>
+</body>
+</html>
